@@ -3,73 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Website</title>
+    <title>My Portfolio</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(to bottom right, #6a11cb, #2575fc);
             margin: 0;
             padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar */
+        nav {
+            background: #6a11cb;
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
             text-align: center;
+        }
+        nav a {
             color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
         }
 
+        /* Hero Section */
         header {
-            padding: 50px 20px;
+            background: linear-gradient(to right, #2575fc, #6a11cb);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
         }
-
         header h1 {
             font-size: 3em;
             margin-bottom: 10px;
-            animation: fadeIn 1.5s ease-in-out;
         }
-
         header p {
             font-size: 1.2em;
-            max-width: 500px;
-            margin: auto;
-            animation: fadeIn 2s ease-in-out;
         }
 
+        /* Sections */
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        #about {
+            background: #f4f4f4;
+        }
+        #projects {
+            background: #fff;
+        }
+        #contact {
+            background: #f4f4f4;
+        }
+
+        /* Project Cards */
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin: 20px;
+            display: inline-block;
+            width: 250px;
+        }
+        .card h3 {
+            color: #2575fc;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* Button */
         .btn {
             display: inline-block;
-            margin-top: 20px;
-            padding: 12px 25px;
-            background-color: white;
-            color: #2575fc;
-            border-radius: 30px;
-            font-weight: bold;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #2575fc;
+            color: white;
+            border-radius: 25px;
             text-decoration: none;
-            transition: background 0.3s, transform 0.2s;
         }
-
         .btn:hover {
-            background-color: #f0f0f0;
-            transform: scale(1.05);
-        }
-
-        footer {
-            margin-top: 50px;
-            padding: 20px;
-            background: rgba(0,0,0,0.2);
-            font-size: 0.9em;
-        }
-
-        @keyframes fadeIn {
-            from {opacity: 0;}
-            to {opacity: 1;}
+            background: #6a11cb;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>🚀 Welcome to My Beautiful Website</h1>
-        <p>This website is hosted for free using <strong>GitHub Pages</strong>. You can customize it and make it your own!</p>
-        <a href="https://github.com/" class="btn">Visit My GitHub</a>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home">
+        <h1>Hi, I'm Manasa N 🚀</h1>
+        <p>Welcome to my personal portfolio website hosted on GitHub Pages.</p>
+        <a href="#projects" class="btn">See My Work</a>
     </header>
 
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I’m passionate about web development and design. I enjoy building beautiful, functional websites and learning new technologies.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <!-- Projects Section -->
+<section id="projects">
+    <h2>My Projects</h2>
+
+    <div class="card">
+        <h3>Kubernetes-Based Multi-Tenant Platform as a Service</h3>
+        <p><strong>Oct 2024 – June 2025</strong></p>
+        <p><em>Tools:</em> Kubernetes, Node.js, React, Docker, HTML/CSS, JavaScript</p>
+        <p>Developed a PaaS system supporting dynamic tenant creation using Kubernetes namespaces and resource quotas. Implemented priority-based tenant scheduling (High > Medium > Low), real-time resource visualization, and auto-scaling deployments. Simulated resource usage with dummy pods, added a retry mechanism for pending requests, and built a React frontend for monitoring and quota updates.</p>
+    </div>
+
+    <div class="card">
+        <h3>Chronic Kidney Disease Prediction (ML Project)</h3>
+        <p><strong>Oct 2022 – May 2023</strong></p>
+        <p><em>Tools:</em> Python</p>
+        <p>Built a machine learning model to predict early-stage chronic kidney disease. Compared multiple algorithms to identify the most accurate model for real-time risk assessment. Performed data preprocessing, feature selection, and evaluation using accuracy and F1-score metrics.</p>
+    </div>
+
+    <div class="card">
+        <h3>Bus Management System (DBMS Project)</h3>
+        <p><strong>Oct 2021</strong></p>
+        <p><em>Tools:</em> PHP, MySQL, HTML, CSS</p>
+        <p>Designed and developed a bus management system with an admin panel. Implemented limited user access, route and schedule management, and secure backend integration. Enabled CRUD operations for buses, users, and routes, improving admin efficiency and system usability.</p>
+    </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:manasanb2001@gmail.com">manasanb2001@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/Manasa-2023" target="_blank">Manasa-2023</a></p>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        &copy; 2025 My Website | Built with ❤️ and GitHub Pages
+        &copy; 2025 My Portfolio | Built with ❤️ using GitHub Pages
     </footer>
+
 </body>
 </html>
